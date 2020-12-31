@@ -9,9 +9,6 @@
 
 \bibliographystyle{orbref-num}
 
-\IEEEoverridecommandlockouts                              % This command is only needed if 
-                                                          % you want to use the \thanks command
-
 \overrideIEEEmargins                                      % Needed to meet printer requirements.
 
 % See the \addtolength command later in the file to balance the column lengths
@@ -23,69 +20,35 @@
 \usepackage{booktabs}
 \usepackage{lipsum}
 
-\title{\LARGE \bf
-Wissenschaftliches Arbeiten - \\Short paper \LaTeX\ document class*
-}
+\title{\LARGE \bf Scientific Work Short Paper \\Feasibility Study - SmartWarehouse}
 
-\author{Guybrush U. Threepwood$^{1}$ and Alexander Schubert$^{2}$% <-this % stops a space
-\thanks{*Based on the guidelines published on the \href{http://conf.papercept.net/conferences/support/tex.php}{PaperCept conference manuscript management website}}% <-this % stops a space
-\thanks{$^{1}$Guybrush U. Threepwood is with the Institute for Pirate Sciences, Three-headed Monkey Group, University of  M\^el\'ee Island
-        {\tt\small gthreepwood@har.har-har.mi}}%
-\thanks{$^{2}$Alexander Schubert is with the Optimization in Robotics and Biomechanics Group, Institute of Computer Engineering, Heidelberg University, Berliner Str. 45, 69120 Heidelberg
-        {\tt\small alexander.schubert@ziti.uni-heidelberg.de, \href{http://orb.iwr.uni-heidelberg.de}{orb.iwr.uni-heidelberg.de}}}%
-}
-
+\author{Felix Hausberger and Robin Kuck}
 
 \begin{document}
-
-
 
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-This demo file is intended to illustrate the short paper \LaTeX\ document class to be used for manuscripts created in the lecture `Wissenschaftliches Arbeiten' based on the style of IEEE publications.
+In this short paper the object detectors \textit{You Only Look Once} and \textit{Single Shot MultiBox Detector} are compared for precision, reactivity, training and inference behaviour and examined for their potential for industrial use. The background scenario of the Smart Warehouse offers live video data of a drone with goods in a warehouse, which are to be classffied and localized in real time. In the future, this should make it possible to carry out inventories and inventory analyses of a warehouse in a time- and cost-efficient manner conserving resources.
+
+The goal of this feasibility study is to find out whether the Smart Warehouse scenario is technically feasible. In addition, the focus is also on the object detectors themselves, their differences in architecture, behavior and how well they are generally suitable for industrial application scenarios.
 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The short paper document class}
-{\bf Important!} Please note that the \verb!wissarbIEEE.cls! file is to be used within the context of the lecture {\it Wissenschaftliches Arbeiten} at the University Heidelberg only and must not be distributed externally!
+\section{Introduction}
 
-%% Figure
-\begin{figure}[h]
-   \centering
-   \includegraphics[width=0.1\textwidth]{fig/knubbi.png}
-   \caption{Example picture.}
-   \label{fig:knubbi}
-\end{figure}
+\section{Related Work}
 
-\subsection{Bibliography styles}
-The \texttt{orbref-num.bst} bibliography style numbers the citations by their order of appearance. Here are two sample references: \cite{Newton1687,Mombaur2009}.
+\section{Architecture of the SmartWarehouse scenario}
 
-\subsection{Lorem Ipsum}
-\lipsum[1]
+\section{Evaluation}
 
-%% Table
-\begin{table}[h]
-\caption{Example table.}
-   \begin{tabularx}{0.48\textwidth}{llr}
-   		 \toprule 
-   		 Symbol & \multicolumn{1}{X}{Description} & Value [m] \\
-		 \midrule
-		  $A_x$ & Horizontal coordinate of A$^{*}$ & 0.0745 \\
-		  $A_z$ & Vertical coordinate of A$^{*}$ & 0.2650 \\  \noalign{\smallskip}
-		  
-		  $C_x$ & Horizontal coordinate of C$^{\#}$ & 0.0700 \\
-		  $C_z$ & Vertical coordinate of C$^{\#}$ & 0.1000 \\
-		  $D_x$ & Horizontal coordinate of D$^{\dag}$ & 0.0602 \\
-		  $D_z$ & Vertical coordinate of D$^{\dag}$ & 0.0860 \\
-		 \bottomrule
-   \end{tabularx}  \label{tab:initmodel}
-\end{table}
+\section{Results}
 
-\lipsum[2]
+\section{Conclusion}
 
 \bibliography{mybibfile}
 

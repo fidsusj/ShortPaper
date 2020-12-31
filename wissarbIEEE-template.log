@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  31 DEC 2020 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  31 DEC 2020 18:03
 entering extended mode
 **./wissarbIEEE-template.tex
 (wissarbIEEE-template.tex
@@ -99,8 +99,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \c@biography=\count186
 \@IEEEtranrubishbin=\box47
 )
-** ATTENTION: Overriding command lockouts (line 12).
-** ATTENTION: Overriding IEEE standard margins (line 15).
+** ATTENTION: Overriding IEEE standard margins (line 12).
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperre
 f.sty"
@@ -349,23 +348,23 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 )) (wissarbIEEE-template.aux)
 \openout1 = `wissarbIEEE-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-Package hyperref Info: Link coloring OFF on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+Package hyperref Info: Link coloring OFF on input line 27.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
 .sty"
@@ -381,9 +380,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count269
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
  (wissarbIEEE-template.out) (wissarbIEEE-template.out)
 \@outlinefile=\write3
 \openout3 = `wissarbIEEE-template.out'.
@@ -409,91 +408,21 @@ topdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-)
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 44.
+) (wissarbIEEE-template.bbl
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+6.
 
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 44.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 44.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 44.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <16> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11.19995> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 44.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.69997> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.5> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 44.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 44.
-
-Underfull \hbox (badness 1448) in paragraph at lines 44--44
-[][][]\OT1/ptm/m/n/8 *Based on the guide-lines pub-lished on the []Pa-per-Cept 
-con-fer-ence
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
-4.
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd
 "
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 2529) in paragraph at lines 44--44
-[][][]$[]$\OT1/ptm/m/n/8 Guybrush U. Three-p-wood is with the In-sti-tute for P
-i-rate Sci-
- []
-
-
-Underfull \hbox (badness 6510) in paragraph at lines 44--44
-\OT1/ptm/m/n/8 ences, Three-headed Mon-key Group, Uni-ver-sity of M[]el[]ee Is-
-land
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[][][]$[]$\OT1/ptm/m/n/8 Alexander Schu-bert is with the Op-ti-miza-tion in Rob
-otics
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-\OT1/ptm/m/n/8 and Biome-chan-ics Group, In-sti-tute of Com-puter En-gi-neer-in
-g,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-\OT1/ptm/m/n/8 Hei-del-berg Uni-ver-sity, Berliner Str. 45, 69120 Hei-del-berg
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-\OT1/pcr/m/n/9 alexander.schubert@ziti.uni-heidelberg.de,
- []
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 48.
-<fig/knubbi.png, id=21, 931.48pt x 2585.66pt>
-File: fig/knubbi.png Graphic file (type png)
-<use fig/knubbi.png>
-Package pdftex.def Info: fig/knubbi.png  used on input line 59.
-(pdftex.def)             Requested size: 50.59209pt x 140.41658pt.
-(wissarbIEEE-template.bbl
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 16.
+
 Underfull \hbox (badness 3930) in paragraph at lines 13--17
 []\OT1/ptm/m/n/8 K. Mom-baur, Us-ing op-ti-miza-tion to cre-ate self-stable hum
 an-
@@ -508,39 +437,30 @@ doi : 10 . 1017 /
 ) [1{C:/Users/D070497/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./fig/knubbi.png>] (wissarbIEEE-template.aux)
+
+]
+(wissarbIEEE-template.aux)
 Package rerunfilecheck Info: File `wissarbIEEE-template.out' has not changed.
-(rerunfilecheck)             Checksum: C37BD6734715EE27FE951001077935C6;239.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
+(rerunfilecheck)             Checksum: C6E5841ED3DC870EA1752D9BCC6FC2FD;350.
  ) 
 Here is how much of TeX's memory you used:
- 6159 strings out of 479765
- 103041 string characters out of 2865212
- 661213 words of memory out of 3000000
- 23039 multiletter control sequences out of 15000+200000
- 578320 words of font info for 107 fonts, out of 3000000 for 9000
+ 6101 strings out of 479765
+ 102245 string characters out of 2865212
+ 561233 words of memory out of 3000000
+ 22994 multiletter control sequences out of 15000+200000
+ 567958 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,10n,73p,278b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,5n,73p,610b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
-nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi6.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/D070497/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D070497/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/User
-s/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8
-a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
-/utmbi8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
-w/times/utmr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on wissarbIEEE-template.pdf (1 page, 744539 bytes).
+nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/
+ucrr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
+times/utmb8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/times/utmbi8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/times/utmr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wissarbIEEE-template.pdf (1 page, 67757 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 67 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
