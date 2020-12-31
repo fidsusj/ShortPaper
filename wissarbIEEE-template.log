@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  31 DEC 2020 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  31 DEC 2020 23:06
 entering extended mode
 **./wissarbIEEE-template.tex
 (wissarbIEEE-template.tex
@@ -410,47 +410,40 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 ) (wissarbIEEE-template.bbl
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-6.
+2.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd
 "
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 16.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
+(Font)              <6> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 16.
+(Font)              <5> on input line 12.
 
-Underfull \hbox (badness 3930) in paragraph at lines 13--17
-[]\OT1/ptm/m/n/8 K. Mom-baur, Us-ing op-ti-miza-tion to cre-ate self-stable hum
-an-
- []
-
-
-Underfull \hbox (badness 2573) in paragraph at lines 13--17
-\OT1/ptm/m/n/8 like run-ning, Robot-ica 27 (2009) 321--330.  []$\OT1/pcr/m/n/8 
-doi : 10 . 1017 /
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+\OT1/ptm/m/n/8 URL []$\OT1/pcr/m/n/8 https : / / doks-[]innovation . com / solu
+tions /
  []
 
 ) [1{C:/Users/D070497/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-
 ]
 (wissarbIEEE-template.aux)
 Package rerunfilecheck Info: File `wissarbIEEE-template.out' has not changed.
-(rerunfilecheck)             Checksum: C6E5841ED3DC870EA1752D9BCC6FC2FD;350.
+(rerunfilecheck)             Checksum: 849F0E1F0E0136105462AE70D689F337;365.
  ) 
 Here is how much of TeX's memory you used:
- 6101 strings out of 479765
- 102245 string characters out of 2865212
- 561233 words of memory out of 3000000
- 22994 multiletter control sequences out of 15000+200000
+ 6108 strings out of 479765
+ 102453 string characters out of 2865212
+ 568233 words of memory out of 3000000
+ 23000 multiletter control sequences out of 15000+200000
  567958 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,5n,73p,610b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,5n,73p,1498b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
 nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/
 ucrr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
@@ -458,9 +451,9 @@ times/utmb8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/urw/times/utmbi8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wissarbIEEE-template.pdf (1 page, 67757 bytes).
+Output written on wissarbIEEE-template.pdf (1 page, 77901 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
+ 80 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

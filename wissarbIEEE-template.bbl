@@ -5,14 +5,23 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{Newton1687}
-I.~Newton, Philosophiae naturalis principia mathematica, J. Societatis Regiae
-  ac Typis J. Streater, 1687.
+\bibitem{doks.innovationGmbH.2020}
+{doks. innovation GmbH},
+  \href{https://doks-innovation.com/solutions/inventairy-xl}{inventairy xl}
+  (2020).
+\newline\urlprefix\url{https://doks-innovation.com/solutions/inventairy-xl}
 
-\bibitem{Mombaur2009}
-K.~Mombaur, Using optimization to create self-stable human-like running,
-  Robotica 27 (2009) 321--330.
-\newblock \href {http://dx.doi.org/10.1017/S0263574708004724}
-  {\path{doi:10.1017/S0263574708004724}}.
+\bibitem{JosephRedmonSantoshDivvalaRossGirshickAliFarhadi.2016}
+{Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi},
+  \href{https://arxiv.org/pdf/1506.02640.pdf}{You only look once: Unified,
+  real-time object detection}.
+\newline\urlprefix\url{https://arxiv.org/pdf/1506.02640.pdf}
+
+\bibitem{WeiLiuDragomirAnguelovDumitruErhanChristianSzegedyScottReedChengYangFuAlexander.2016}
+{Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed,
+  Cheng-Yang Fu, Alexander C. Berg},
+  \href{https://arxiv.org/pdf/1512.02325.pdf}{Ssd: Single shot multibox
+  detector}.
+\newline\urlprefix\url{https://arxiv.org/pdf/1512.02325.pdf}
 
 \end{thebibliography}
