@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  31 DEC 2020 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  12 JAN 2021 22:50
 entering extended mode
 **./wissarbIEEE-template.tex
 (wissarbIEEE-template.tex
@@ -408,52 +408,72 @@ topdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-) (wissarbIEEE-template.bbl
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 62.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 62.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 62.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 62.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
 2.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pcr.fd
 "
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 12.
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[][][][]\OT1/ptm/m/n/8 see []$\OT1/pcr/m/n/8 https : / / www . kaggle . com / f
+idsusj /
+ []
 
+[1{C:/Users/D070497/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+<fig/ssd_results.png, id=72, 948.54375pt x 276.43275pt>
+File: fig/ssd_results.png Graphic file (type png)
+<use fig/ssd_results.png>
+Package pdftex.def Info: fig/ssd_results.png  used on input line 81.
+(pdftex.def)             Requested size: 252.94499pt x 73.71408pt.
+
+Overfull \hbox (7.22688pt too wide) in paragraph at lines 81--82
+ [][] 
+ []
+
+(wissarbIEEE-template.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
 \OT1/ptm/m/n/8 URL []$\OT1/pcr/m/n/8 https : / / doks-[]innovation . com / solu
 tions /
  []
 
-) [1{C:/Users/D070497/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+[2 <./fig/ssd_results.png>]) [3
 
-
-]
-(wissarbIEEE-template.aux)
+] (wissarbIEEE-template.aux)
 Package rerunfilecheck Info: File `wissarbIEEE-template.out' has not changed.
-(rerunfilecheck)             Checksum: 849F0E1F0E0136105462AE70D689F337;365.
+(rerunfilecheck)             Checksum: 1E9C37BEC9B3D0C93E47C7A01A595DEA;783.
  ) 
 Here is how much of TeX's memory you used:
- 6108 strings out of 479765
- 102453 string characters out of 2865212
- 568233 words of memory out of 3000000
- 23000 multiletter control sequences out of 15000+200000
- 567958 words of font info for 86 fonts, out of 3000000 for 9000
+ 6145 strings out of 479765
+ 102973 string characters out of 2865212
+ 574233 words of memory out of 3000000
+ 23020 multiletter control sequences out of 15000+200000
+ 570621 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,5n,73p,1498b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,8n,73p,2488b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
-nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/
-ucrr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
-times/utmb8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/urw/times/utmbi8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/urw/times/utmr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wissarbIEEE-template.pdf (1 page, 77901 bytes).
+nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/courier/ucrr8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/times/utmb8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/D070497/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/D070497/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wissarbIEEE-template.pdf (3 pages, 289750 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

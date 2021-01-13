@@ -11,17 +11,27 @@
   (2020).
 \newline\urlprefix\url{https://doks-innovation.com/solutions/inventairy-xl}
 
-\bibitem{JosephRedmonSantoshDivvalaRossGirshickAliFarhadi.2016}
-{Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi},
-  \href{https://arxiv.org/pdf/1506.02640.pdf}{You only look once: Unified,
-  real-time object detection}.
-\newline\urlprefix\url{https://arxiv.org/pdf/1506.02640.pdf}
-
 \bibitem{WeiLiuDragomirAnguelovDumitruErhanChristianSzegedyScottReedChengYangFuAlexander.2016}
 {Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed,
   Cheng-Yang Fu, Alexander C. Berg},
   \href{https://arxiv.org/pdf/1512.02325.pdf}{Ssd: Single shot multibox
   detector}.
 \newline\urlprefix\url{https://arxiv.org/pdf/1512.02325.pdf}
+
+\bibitem{JosephRedmonSantoshDivvalaRossGirshickAliFarhadi.2016}
+{Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi},
+  \href{https://arxiv.org/pdf/1506.02640.pdf}{You only look once: Unified,
+  real-time object detection}.
+\newline\urlprefix\url{https://arxiv.org/pdf/1506.02640.pdf}
+
+\bibitem{JosephRedmon.2018}
+A.~F. {Joseph Redmon}, \href{https://arxiv.org/pdf/1804.02767.pdf}{Yolov3: An
+  incremental improvement}.
+\newline\urlprefix\url{https://arxiv.org/pdf/1804.02767.pdf}
+
+\bibitem{KaimingHeGeorgiaGkioxariPiotrDollarRossGirshick.2018}
+{Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick},
+  \href{https://arxiv.org/pdf/1703.06870.pdf}{Mask r-cnn}.
+\newline\urlprefix\url{https://arxiv.org/pdf/1703.06870.pdf}
 
 \end{thebibliography}
