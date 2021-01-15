@@ -25,6 +25,8 @@
 \author{Felix Hausberger and Robin Kuck}
 
 \begin{document}
+	
+	% tense
 
 \maketitle
 
@@ -90,33 +92,41 @@ To find two suitable object detectors to evaluate, the effort setup the implemen
 
 Due to these circumstances and the poorer performance in time-critical model inference, YOLO and SSD were selected as the two detectors to evaluate the capability of object detectors for industrial use using the smart warehouse scenario as an example. The official implementation of YOLOv3 in the \textit{Darknet} framework and a custom implementation of SSD300 in the \textit{PyTorch} framework is used.
 
-\subsection{Drone}
-
-Analysiert man den Markt auf programmierbare Drohnen mit einem frei zugänglichen
-Software Development Kit (SDK) und integrierter Kamera, so fällt das Angebot sehr
-gering aus. Im Folgenden soll ein Überblick über die zwei verfügbaren Modelle Ryze
-Tech Tello EDU und Parrot Bebop 2 gegeben werden [45, 46]. 
-
 \subsection{Training infrastructure}
 
-Deep Lerning: Tensor operations like matrix multiplications, covolutions, ...
-Needs high parallelisation and tact frequencies
-GPUs: CUDA (Compute UnifiedDevice Architecture) programming model and parallel computing platform => calc operations auf GPUs auslagern
+When selecting the training infrastructure, cloud PaaS offerings were first considered. Important factors in the selection process were the lowest possible operating costs, a diverse range of hardware accelerators, and simple setup of the training infrastructure. In particular, the test versions of the respective offerings should be taken advantage of in order to achieve low operating costs.
 
-Das CUDA Toolkit beinhaltet
-GPU beschleunigte Bibliotheken, einen Compiler, Entwicklungswerkzeuge sowie die
-eigentliche CUDA Laufzeit und wird von vielen Deep Learning Bibliotheken genutzt,
-wie z.B. PyTorch
+\textit{Amazon SageMaker} did not offer cloud GPUs as a hardware accelerators at all in its free trial version, which is why is was elimitated from the selection. Similarly, the not enough quota was available for the \textit{Deep Learning VM} from the  \textit{Google Cloud Platform}. However, since Microsoft Azure's offering was only described very superficially, the decision was ultimately also made against Microsoft Azure.
 
-Auch bietet NVIDIA die sogenannte NVIDIA CUDA Deep
-Neural Network Library (cuDNN) an, die hardwareoptimierte Routinen zu beispielsweise
-Konvolution oder Pooling ermöglicht [30]. Hauptvergleichskriterien zwischen GPUs
-sind hierbei der Grad der möglichen Parallelisierung und die reine Rechenleistung im
-Verhältnis zum Stromverbrauch.
+The exlusion of the three hyperscalar offerings led to \textit{FloydHub} as another deep learning platform. Here hardware accelerated GPUs were freely accessible from the very beginning until a certain time throshold was reached based on the GPU model. During the training with the NVIDIA Tesla K80, however, it was noticeable that the choice of this GPU did not bring any major performance improvements compared to local training.It is noticeable that an NVIDIA Tesla K80 can keep up with the existing local graphics cards in the degree of parallelization, but scores far worse in the number of computing operations per second. Compared to an NVIDIA GeForce GTX 1080, the NVIDIA Tesla K80 performs less than half as fast in terms of computing power. For work-related reasons, it should be noted that the two object detectors SSD and YOLO are each trained locally on different hardware, SSD on an NVIDIA GeForce GTX 1080 and YOLO on an NVIDIA GeForce RTX 2060 GPU. Therefore, it was made use of NVIDIAs' \textit{Compute Unified Device Architecture} (CUDA) as a programming model and parallel computing platform to offload computing power to the GPUs. Also the NVIDIA \textit{CUDA Deep Neural Network Library} (cuDNN) was used, which offers hardware-optimized routines for convolution or pooling operations. 
 
-AWS SageMaker, Google Cloud Platfrom AI Platform (TPUs!), Colab, Azure, FloydHub
+\subsection{Drone selection}
+
+Analyzing the market for programmable drones with a freely available software development kit (SDK) and integrated camera, the supply is very low. The choice restricts to either the \textit{Parot Bebop II} or the \textit{Ryze Tello EDU}. When also taking into account the legal framework, only the \textit{Ryze Tello EDU} was left for legal usage.
+
+\subsection{Inventory software specification}
+
+To process the drone's image data for an inventory, the drone is to be accessed by a client application. The server, acting as a client, is to connect to the drone and sends the flight signals as static flight instructions to the drone. The deep learning model is also to be integrated on the server for inference. The server's task will be to infer the video stream frames received from the drone with the model, count the detected objects for the inventory using a counting algorithm, and then forward the image data with the bounding boxes drawn in via livestream to a web application for visualization. A REST interface should provide information about the inventory data of the warehouse and provide a way to initiate the flight sequence.
+
+\section{Realization}
+
+\textbf{SSD}. The base network of the SSD consists of a VGG16 pre-trained on ImageNet. The remaining convolutional layers are Xavier initialized. SSD was trainied with a batch size of 16, $1.0e^{-3}$ as learning rate and 0.9 as momentum. ReLU was chosen as its activation function and smooth L1 as its loss function. Using the mini-batch learning approach training was done with six-fold cross validation with 22 epochs each.
+
+\textbf{YOLO}. YOLO was trained with a batch size of 64 and 16subdivisions. The learning rate was $1.0e^{-3}$ initially, then decreased to $1.0e^{-4}$ after 80\%, and to $1.0e^{-5}$ after 90\% of the training process, the momentum was also 0.9. 18.000 batches were specified in total for the mini-batch gradient descent training process. LReLU was chosen as the activation function and squared errors as the loss function.
+
+\textbf{Counting algorithm}. After each inference process, the detected objects are saved so that the algorithm can access both the most recently detected objects and the newly detected objects when it is called. For all detected objects in the current run, the algorithm searches all last detected objects to find out if an object was already present in the previous image. Crucial for this is the same label as well as the distance of the bounding boxes of the currently detected object to the object of the previous round. Only if the object was not already present in the previous round according to these criteria, it is counted.
+
+\textbf{Drone connection}. For control and access to the video stream, the Ryze Tello EDU offers its own WiFi network to which the control unit must connect. The communication takes place via the UDP protocol1 and consists of several communication channels. The sending of flight commands and the polling of the video stream is done via a bidirectional socket connection between the client application and the Ryze Tello EDU.
+
+\textbf{Model inference}. Since the H.264 decoder can only run on Python version 2.7 and the PyTorch framework used for the SSD or the Darknet framework for YOLO can only run on Python version 3, it was not possible to allow inference of live video data from the drone. Python version 3 is generally not backward compatible with previous versions, so the H.264 decoder required by the Ryze Tello EDU SDK was not compatible with the existing infrastructure. Because of this, it was decided to simplify the problem by inferring images from a webcam instead of images from the drone.
 
 \section{Results and evaluation} \label{evaluation}
+
+SSD reached an mAP score of 83.1\%, while YOLO scores almost equally high with 80.4\%. To minimize double detected objects the confidence score for SSD was set to 0.7, for YOLO already 0.25 was enough. SDD struggles to detect partly hidden objects. Also detecting objects from extreme view positions was difficult, but can be improved by adding more samples for this case. For those special cases YOLO performs equally bad, for the latter even worse. SSD reliably detects objects until a three meters distance threshold, YOLOs' maximum range is only two meters. Overlit lighting conditions leads to no or wrong object detection using the SSD or YOLO algorithm. However, all detections of both models reacted invariantly to different backgrounds or image resolutions. 
+
+Both SSD and YOLO are capable to run inference in the real time scenario of \textit{SmartWarehouse}, SSD with 30 PFS and YOLO with 28 FPS. 
+
+SSD took 16.5 hours to train, whereas YOLO took 8 hours. Nevertheless, as both algorithms were trained on different hardware, use different frameworks and use different batch sizes, the results cannot be really compared. 
 
 \section{Discussion} \label{results}
 
