@@ -27,6 +27,8 @@
 \begin{document}
 	
 	% tense
+	% kürzen und schauen ob die Arbeit einen starken eindruck macht
+	% mit der Vorlesung mergen
 
 \maketitle
 
@@ -61,7 +63,7 @@ Two goals were defined for the feasibility study of \textit{SmartWarehouse}. Fir
 \subsection{Dataset}
 
 The \textit{SmartWarehouse} is based on a large department store, where products are not packed in
-are not packed in cartons, but are arranged as a whole on shelves. In the construction of the training data set, however, the feasibility study does not aim to represent such a store completely in the data set, but rather to select a dataset that is as extensive as possible in order to prove the general feasibility of the \textit{SmartWarehouse} scenario. In the context, the focus was therefore on beverage bottles of a department store. Nine categories were defined: \textit{Saskia Water Small}, \textit{Saskia Water Large}, \textit{Pepsi Cola Small}, \textit{Pepsi Cola Large}, \textit{ISO}, \textit{ACE}, \textit{Stenger Blackcurrant Spritzer}, \textit{Stenger Apple Spritzer}, and \textit{Vitamalz Malt Beer}. All classes are distributed equally in the data set. The data set itself is 1.45 GB big and consists of 1088 manually annotated images of resolution 2112x4608 and 24 bit color depth. The annotations are given in \textit{PascalVOC} and \textit{YOLO} format. 75\% of the images include a single instances of a beverage bottle to better train the patterns of the different classes. Furthermore, 13\% of the images contain occlusions of objects to be detected, detection situations from extreme viewing positions are represented to 4\%, and difficult illumination and lighting conditions are included to 8\%. Only a few examples (2\%) are related to different distances during detection. Care was also taken to continuously vary the backgrounds of the objects being detected. With the enrichment of the data set with representations of such difficult recording circumstances, it is hoped to increase the generalization capability of Deep Learning models based on them. Finally, to simulate the department store where several objects are to be detected at once, in 12.5\% of all images the objects are arranged on shelves, one behind the other or in beverage crates. From the total dataset of 1088 images, 90 images were extracted for later validation. The remaining 998 consist of 200 images of test data and 798 images for training. In 90\% of all images, only objects of one class are shown, since commodity inventories are likewise mostly grouped by commodity. The dataset was published on Kaggle\footnote{see \url{https://www.kaggle.com/fidsusj/smartwarehousessd} and \url{https://www.kaggle.com/fidsusj/smartwarehouseyolo}} for both PascalVOC format and YOLO format.
+are not packed in cartons, but are arranged as a whole on shelves. In the construction of the training dataset, however, the feasibility study does not aim to represent such a store completely in the dataset, but rather to select a dataset that is as extensive as possible in order to prove the general feasibility of the \textit{SmartWarehouse} scenario. In the context, the focus was therefore on beverage bottles of a department store. Nine categories were defined: \textit{Saskia Water Small}, \textit{Saskia Water Large}, \textit{Pepsi Cola Small}, \textit{Pepsi Cola Large}, \textit{ISO}, \textit{ACE}, \textit{Stenger Blackcurrant Spritzer}, \textit{Stenger Apple Spritzer}, and \textit{Vitamalz Malt Beer}. All classes are distributed equally in the dataset. The dataset itself is 1.45 GB big and consists of 1088 manually annotated images of resolution 2112x4608 and 24 bit color depth. The annotations are given in \textit{PascalVOC} and \textit{YOLO} format. 75\% of the images include a single instances of a beverage bottle to better train the patterns of the different classes. Furthermore, 13\% of the images contain occlusions of objects to be detected, detection situations from extreme viewing positions are represented to 4\%, and difficult illumination and lighting conditions are included to 8\%. Only a few examples (2\%) are related to different distances during detection. Care was also taken to continuously vary the backgrounds of the objects being detected. With the enrichment of the dataset with representations of such difficult recording circumstances, it is hoped to increase the generalization capability of Deep Learning models based on them. Finally, to simulate the department store where several objects are to be detected at once, in 12.5\% of all images the objects are arranged on shelves, one behind the other or in beverage crates. From the total dataset of 1088 images, 90 images were extracted for later validation. The remaining 998 consist of 200 images of test data and 798 images for training. In 90\% of all images, only objects of one class are shown, since commodity inventories are likewise mostly grouped by commodity. The dataset was published on Kaggle\footnote{see \url{https://www.kaggle.com/fidsusj/smartwarehousessd} and \url{https://www.kaggle.com/fidsusj/smartwarehouseyolo}} for both PascalVOC format and YOLO format.
 
 \subsection{Introduction of evaluation criteria}
 
@@ -76,7 +78,7 @@ To better compare object detectors with each other the following evaluation crit
 
 \subsection{Selection of object detectors}
 
-For the smart warehouse scenario, a choice should be made between the four detectors Faster R-CNN, Mask R-CNN, SSD and YOLO. 
+For the \textit{SmartWarehouse} scenario, a choice should be made between the four detectors Faster R-CNN, Mask R-CNN, SSD and YOLO. 
 
 \begin{figure}[h]
 	\centering
@@ -88,9 +90,9 @@ For the smart warehouse scenario, a choice should be made between the four detec
 According to the reference results in \autoref{ssd_results}, it is clear that the SSD performs best in terms of mAP with 74.3\% and 76.8\%, respectively. Faster-RCNN can keep up with 73.2\% in terms of mAP,
 but with only 7 FPS it is not designed for fast inference. YOLO scores worse than the SSD in both categories, it essentially achieves an mAP of 66.4\% and a frame rate of 21 FPS. The SSD thus manages to maintain a good balance between precision and responsiveness. Comparing Mask-RCNN from the original paper in \cite{KaimingHeGeorgiaGkioxariPiotrDollarRossGirshick.2018} with Faster-RCNN (RoI-Align) results in a mAP difference of 38.2\% to 37.3\%. Only 5 FPS could be reached. 
 
-To find two suitable object detectors to evaluate, the effort setup the implementations and to adapt them to be trained with a custom data set was also taken into account. Whereas the SSD and YOLO implementations were easy to handle regarding these two tasks, implementations of ferster-RCNN or Mask-RCNN were either not supported on the operating system of choice or already depricated and no longer supported. 
+To find two suitable object detectors to evaluate, the effort setup the implementations and to adapt them to be trained with a custom dataset was also taken into account. Whereas the SSD and YOLO implementations were easy to handle regarding these two tasks, implementations of ferster-RCNN or Mask-RCNN were either not supported on the operating system of choice or already depricated and no longer supported. 
 
-Due to these circumstances and the poorer performance in time-critical model inference, YOLO and SSD were selected as the two detectors to evaluate the capability of object detectors for industrial use using the smart warehouse scenario as an example. The official implementation of YOLOv3 in the \textit{Darknet} framework and a custom implementation of SSD300 in the \textit{PyTorch} framework is used.
+Due to these circumstances and the poorer performance in time-critical model inference, YOLO and SSD were selected as the two detectors to evaluate the capability of object detectors for industrial use using the \textit{SmartWarehouse} scenario as an example. The official implementation of YOLOv3 in the \textit{Darknet} framework and a custom implementation of SSD300 in the \textit{PyTorch} framework is used.
 
 \subsection{Training infrastructure}
 
@@ -130,7 +132,50 @@ SSD took 16.5 hours to train, whereas YOLO took 8 hours. Nevertheless, as both a
 
 \section{Discussion} \label{results}
 
+\textbf{Use of the object detectors in the industry}. In terms of precision, both object detectors turn out better than the original reference results from the scientific publications. However, it should be noted that the results do not compare well with those of the scientific publications, since they were trained on different, significantly simpler data. With 83.1\%, SSD300 is 8.8\% better, while YOLOv3 even shows an improvement of 16.7\%. Nevertheless, it can be concluded that both implementations scale in terms of precision in an order of magnitude that comes after the level of the comparison results from PascalVOC 2007.
+
+Another evaluation criterion is the responsiveness. Here, SSD300 scores slightly better with an average of 30 FPS than YOLOv3 with 28 FPS, although this difference should hardly be seen as a true decision criterion to prefer SSD300 over YOLOv3.
+
+As training for SSD and YOLO was done on different hardware, the training duration of 16.5 hours for SSD and 8 hours for YOLO cannot really be compared. Nevertheless if it were possible to use cloud infrastructure for the training process of both implementations, training duration could be scaled down tremendously. Nevertheless, YOLO was easier to adapt to a custom dataset and  uses subdivisions to avoid a memory overflow by partitioning the amount of images to be loaded into graphics memory in one batch. 
+
+Regarding inference behavior both object detectors stuggle with difficult lightning conditions, extreme viewing positions, longer distances and occlusions. Some of those problems could be tackled better by enhancing the dataset with additional instances for those cases. For a close comparison see \autoref{inference}. 
+
+\begin{table}[h]
+	\caption{Inference behavior of SSD300 and YOLOv3}
+	\begin{tabularx}{0.48\textwidth}{lcc}
+		\toprule 
+		Criterion & SSD300 & YOLOv3 \\
+		\midrule
+		Lighting & 0 & 0 \\
+		Extreme view positions & 0 & 0 \\
+		Distance & 0 & 0 \\
+		Occlusion & - & - \\
+		Double detection & + & + \\
+		Background & + & + \\
+		Resolution & + & + \\
+		\bottomrule
+	\end{tabularx}  \label{inference}
+\end{table}
+ 
+Overall, it can be concluded that both SSD300 and YOLOv3 are object detectors for industrial use. If many objects of different scales are to be detected in the detection environment, SSD300 is preferable to YOLOv3. However, if this is not the case and more emphasis is placed on accuracy for simple datasets such as \textit{SmartWarehouse}, YOLOv3 is the better choice.
+
+\textbf{Feasibility of the \textit{SmartWarehouse} scenario.} For reasons of extensibility of the \textit{SmartWarehouse} scenario, YOLOv3 was selected as the final object detector. At the moment, the scenario is only designed for beverage bags as an example. If we return to the actual idea of performing inventories in large department stores with many different products, the aspect of better precision of detection for the same objects of different scales tends to fall into the background with SSD300. Rather, it is important to enable reliable detection behavior.
+
+Still three issues remain unsolved:
+
+\begin{itemize}
+	\item Inferring the video stream of the drone, due to the incompatibility of the runtime environments for the H.264 decoder and the deep learning models,
+	\item The detection of occluded objects, and
+	\item The unique counting of objects during the inventory.
+\end{itemize}
+
+The \textit{SmartWarehouse} scenario is therefore not feasible according to the decisions made and with the given framework conditions.
+
 \section{Conclusion} \label{conclusion}
+
+The goal of this work was to evaluate how well existing object detectors are basically suited for industrial application scenarios, and to determine whether the specific application scenario for conducting an inventory of department stores using a drone can be implemented as a prototype. 
+
+Even if object detectors such as SSD and YOLO most certainly have the potential to be used industrially, the \textit{SmartWarehouse} scenario still could not be realized end-to-end. To do so, one would need to enhance the dataset to cover certain image capturing conditions as described, implement a custom H.264 decoder to connect the drone video stream to the selected deep learning model for real time inference and find a solution to uniquely identify objects during the detection process like additionaly making use of RFID technology. 
 
 \bibliography{mybibfile}
 
