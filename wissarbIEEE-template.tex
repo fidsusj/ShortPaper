@@ -69,7 +69,6 @@ To better compare object detectors with each other the following evaluation crit
 \begin{itemize}
 	\item Precision: The precision of an object detector measured in mAP
 	\item Reactivity: The inference rate with the model measured in \textit{Frames Per Second} (FPS)
-	\item Training behavior: The speed of the gradient curve until convergence measured in training epochs
 	\item Inference behavior: The inference behavior under special lighting conditions, extreme viewing positions, occultation of objects, and the behavior with double detected objects measured with good, medium, poor. 
 \end{itemize}
 
@@ -87,12 +86,6 @@ For the \textit{SmartWarehouse} scenario, a choice should be made between the fo
 According to the reference results in \autoref{ssd_results}, it is clear that the SSD performs best in terms of mAP with 74.3\% and 76.8\%, respectively. Faster-RCNN can keep up with 73.2\% in terms of mAP, but with only 7 FPS it is not designed for fast inference. YOLO scores worse than the SSD in both categories, it essentially achieves an mAP of 66.4\% and a frame rate of 21 FPS. The SSD thus manages to maintain a good balance between precision and responsiveness. Comparing Mask-RCNN from the original paper in \cite{KaimingHeGeorgiaGkioxariPiotrDollarRossGirshick.2018} with Faster-RCNN (RoI-Align) results in a mAP difference of 38.2\% to 37.3\%. Only 5 FPS could be reached. 
 
 As the effort to setup and to adapt Faster-RCNN and Mask-RCNN to be trained on a custom dataset was far higher and the performance in time-critical model inference was poorer, YOLO and SSD were selected as the two detectors to evaluate the capability of object detectors for industrial use.
-
-\subsection{Training infrastructure}
-
-When selecting the training infrastructure, cloud PaaS offerings were first considered. Important factors in the selection process were the lowest possible operating costs, a diverse range of hardware accelerators better than the local hardware, and a simple setup of the training infrastructure. In particular, the test versions of the respective offerings should be taken advantage of in order to achieve low operating costs. Unfortunately, all considered hyperscalar offerings including \textit{Amazon SageMaker}, \textit{GCP Deep Learning VM}, \textit{Microsoft Azure} and \textit{FloydHub} could not sufficiently meet all of these criteria, which is why the object detectors were trained locally. 
-
-For work-related reasons, it should be noted that the two object detectors SSD and YOLO are each trained locally on different hardware, SSD on an NVIDIA GeForce GTX 1080 and YOLO on an NVIDIA GeForce RTX 2060 GPU. Therefore, it was made use of NVIDIAs' \textit{Compute Unified Device Architecture} (CUDA) as a programming model and parallel computing platform to offload computing power to the GPUs. Also the NVIDIA \textit{CUDA Deep Neural Network Library} (cuDNN) was used, which offers hardware-optimized routines for convolution or pooling operations. 
 
 \subsection{Drone selection}
 
@@ -120,17 +113,13 @@ SSD reached an mAP score of 83.1\%, while YOLO scores almost equally high with 8
 
 Both SSD and YOLO are capable to run inference in the real time scenario of \textit{SmartWarehouse}, SSD with 30 PFS and YOLO with 28 FPS. 
 
-SSD took 16.5 hours to train, whereas YOLO took 8 hours. Nevertheless, as both algorithms were trained on different hardware, use different frameworks and use different batch sizes, the results cannot be really compared. 
-
 \section{Discussion} \label{discussion}
 
 \textbf{Use of the object detectors in the industry}. In terms of precision, both object detectors turn out better than the original reference results from the scientific publications. However, it should be noted that the results do not compare well with those of the scientific publications, since they were trained on different, significantly simpler data. With 83.1\%, SSD300 is 8.8\% better, while YOLOv3 even shows an improvement of 16.7\%. Nevertheless, it can be concluded that both implementations scale in terms of precision in an order of magnitude that comes after the level of the comparison results from PascalVOC 2007.
 
 Another evaluation criterion is the responsiveness. Here, SSD300 scores slightly better with an average of 30 FPS than YOLOv3 with 28 FPS, although this difference should hardly be seen as a true decision criterion to prefer SSD300 over YOLOv3.
 
-As training for SSD and YOLO was done on different hardware, the training duration of 16.5 hours for SSD and 8 hours for YOLO cannot really be compared. Nevertheless if it were possible to use cloud infrastructure for the training process of both implementations, training duration could be scaled down tremendously. Nevertheless, YOLO was easier to adapt to a custom dataset and uses subdivisions to avoid a memory overflow by partitioning the amount of images to be loaded into graphics memory in one batch. 
-
-Regarding inference behavior both object detectors stuggle with difficult lightning conditions, extreme viewing positions, longer distances and occlusions. Some of those problems could be tackled better by enhancing the dataset with additional instances for those cases. For a close comparison see \autoref{inference}. 
+Regarding inference behavior both object detectors struggle with difficult lightning conditions, extreme viewing positions, longer distances and occlusions. Some of those problems could be tackled better by enhancing the dataset with additional instances for those cases. For a close comparison see \autoref{inference}. 
 
 \begin{table}[h]
 	\caption{Inference behavior of SSD300 and YOLOv3}
