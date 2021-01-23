@@ -27,7 +27,7 @@
 \begin{document}
 	
 	% tense
-	% kürzen und schauen ob die Arbeit einen starken eindruck macht
+	% schauen ob die Arbeit einen starken eindruck macht
 	% mit der Vorlesung mergen
 
 \maketitle
@@ -35,18 +35,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-In this short paper the object detectors \textit{You Only Look Once} and \textit{Single Shot MultiBox Detector} are compared for precision, reactivity, and inference behaviour and examined for their potential for industrial use. The background scenario of \textit{SmartWarehouse} offers live video data of a drone with goods in a warehouse, which are to be classified and localized in real time. In the future, this should make it possible to carry out inventories and inventory analyses of a warehouse in a time- and cost-efficient manner conserving resources. The goal of this feasibility study is also to find out whether the \textit{SmartWarehouse} scenario is technically feasible.
+The background scenario of \textit{SmartWarehouse} offers live video data of a drone with goods in a warehouse, which are to be classified and localized in real time. In the future, this should make it possible to carry out inventories and inventory analyses of a warehouse in a time- and cost-efficient manner conserving resources.
 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-In times of the industrial change towards Industry 4.0 object detectors represent an optimization potential not to be neglected, e.g. in warehousing and logistics. Combined with an autonomous drone, such object detectors could make it possible to conduct inventory checks in a warehouse without human assistance. How different object detectors behave when applied to a real time industry scenario like \textit{SmartWarehouse} should be evaluated in this short paper. As being a feasibility study, the main goal of this work also is to discuss the technical feasibility of the \textit{SmartWarehouse} idea. In \autoref{relatedwork} related work to the two main object detectors should be introduced before explaining the approach and architecture of the \textit{SmartWarehouse} prototype in \autoref{architecture}. In \autoref{evaluation} the results of the feasibility study will be presented and evaluated before the interpretability of the results is discussed in \autoref{discussion}. \autoref{conclusion} gives a quick conclusion about the main achievements of this short paper.
+Combined with an autonomous drone, modern object detectors could make it possible to conduct inventory checks in the field of warehousing and logistics without human assistance. How different object detectors behave when applied to a real time industry scenario like \textit{SmartWarehouse} should be evaluated in this short paper. As being a feasibility study, the main goal of this work also is to discuss the technical feasibility of the \textit{SmartWarehouse} idea. In \autoref{relatedwork} related work to the two main object detectors should be introduced before explaining the approach and architecture of the \textit{SmartWarehouse} prototype in \autoref{architecture}. In \autoref{evaluation} the results of the feasibility study will be presented and evaluated before the interpretability of the results is discussed in \autoref{discussion}. \autoref{conclusion} gives a quick conclusion about the main achievements of this short paper.
 
 \section{Related Work} \label{relatedwork}
-
-The idea of automized inventory checks with drones is not new. \cite{doks.innovationGmbH.2020} uses a similar approach, but uses normal RFID technology or simple barcodes to identify a product. Using this approach only a small number of instances at a time can be identified, while using object detection algorithms enable many-numbered and faster processing. 
 
 The paper \cite{WeiLiuDragomirAnguelovDumitruErhanChristianSzegedyScottReedChengYangFuAlexander.2016} introduces the \textit{Single Shot MultiBox Detector} (SSD), an object detector reaching up to 76.9\% mean average precision (mAP) while still keeping real time detection characteristics compared to its preceeding competitors like regional convolutional neural networks (R-CNNs). It uses a single neural network to detect objects and creates a set of default bounding boxes over different aspect ratios and scales for each feature map location instead of using an additional bounding box proposal step. 
 
@@ -95,7 +93,7 @@ Regarding inference behavior both object detectors struggle with difficult light
  
 Overall, it can be concluded that both SSD300 and YOLOv3 are object detectors for industrial use. If many objects of different scales are to be detected in the detection environment, SSD300 is preferable to YOLOv3. However, if this is not the case and more emphasis is placed on accuracy for simple datasets such as \textit{SmartWarehouse}, YOLOv3 is the better choice.
 
-For reasons of extensibility of the \textit{SmartWarehouse} scenario, YOLOv3 was selected as the final object detector. At the moment, the scenario is only designed for beverage bags as an example. If we return to the actual idea of performing inventories in large department stores with many different products, the aspect of better precision of detection for the same objects of different scales tends to fall into the background with SSD300. Rather, it is important to enable reliable detection behavior. Still three issues remain unsolved:
+When evaluating the technical feasibility of the \textit{SmartWarehouse} scenario, three issues remained unsolved:
 
 \begin{itemize}
 	\item Inferring the video stream of the drone, due to the incompatibility of the runtime environments for the H.264 decoder and the deep learning models,

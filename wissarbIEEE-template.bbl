@@ -5,12 +5,6 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{doks.innovationGmbH.2020}
-{doks. innovation GmbH},
-  \href{https://doks-innovation.com/solutions/inventairy-xl}{inventairy xl}
-  (2020).
-\newline\urlprefix\url{https://doks-innovation.com/solutions/inventairy-xl}
-
 \bibitem{WeiLiuDragomirAnguelovDumitruErhanChristianSzegedyScottReedChengYangFuAlexander.2016}
 {Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed,
   Cheng-Yang Fu, Alexander C. Berg},
