@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  23 JAN 2021 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  24 JAN 2021 00:15
 entering extended mode
 **./wissarbIEEE-template.tex
 (wissarbIEEE-template.tex
@@ -410,16 +410,16 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 62.
+(Font)              <7> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 62.
+(Font)              <5> on input line 58.
 <fig/ssd_results.png, id=36, 948.54375pt x 276.43275pt>
 File: fig/ssd_results.png Graphic file (type png)
 <use fig/ssd_results.png>
-Package pdftex.def Info: fig/ssd_results.png  used on input line 71.
+Package pdftex.def Info: fig/ssd_results.png  used on input line 67.
 (pdftex.def)             Requested size: 252.94499pt x 73.71408pt.
 
-Overfull \hbox (7.22688pt too wide) in paragraph at lines 71--72
+Overfull \hbox (7.22688pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
@@ -440,16 +440,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
 ) [2] (wissarbIEEE-template.aux)
 Package rerunfilecheck Info: File `wissarbIEEE-template.out' has not changed.
-(rerunfilecheck)             Checksum: 849F0E1F0E0136105462AE70D689F337;365.
+(rerunfilecheck)             Checksum: 4B816DD1B64A862B82AA161C3CBC5048;330.
  ) 
 Here is how much of TeX's memory you used:
  6123 strings out of 479765
- 102698 string characters out of 2865212
- 575233 words of memory out of 3000000
+ 102694 string characters out of 2865212
+ 574233 words of memory out of 3000000
  23009 multiletter control sequences out of 15000+200000
  567958 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,5n,73p,1198b,381s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,5n,73p,1197b,381s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
 nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy7.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type
@@ -458,7 +458,7 @@ nts/type1/urw/times/utmb8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX
 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/D070497/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/D070497/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wissarbIEEE-template.pdf (2 pages, 278828 bytes).
+Output written on wissarbIEEE-template.pdf (2 pages, 278895 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  15 named destinations out of 1000 (max. 500000)
