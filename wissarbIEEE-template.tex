@@ -35,14 +35,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-In this short paper the object detectors \textit{You Only Look Once} and \textit{Single Shot MultiBox Detector} are compared for precision, reactivity, training and inference behaviour and examined for their potential for industrial use. The background scenario of the Smart Warehouse offers live video data of a drone with goods in a warehouse, which are to be classified and localized in real time. In the future, this should make it possible to carry out inventories and inventory analyses of a warehouse in a time- and cost-efficient manner conserving resources. The goal of this feasibility study is also to find out whether the Smart Warehouse scenario is technically feasible.
+In this short paper the object detectors \textit{You Only Look Once} and \textit{Single Shot MultiBox Detector} are compared for precision, reactivity, and inference behaviour and examined for their potential for industrial use. The background scenario of \textit{SmartWarehouse} offers live video data of a drone with goods in a warehouse, which are to be classified and localized in real time. In the future, this should make it possible to carry out inventories and inventory analyses of a warehouse in a time- and cost-efficient manner conserving resources. The goal of this feasibility study is also to find out whether the \textit{SmartWarehouse} scenario is technically feasible.
 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-In times of the industrial change towards Industry 4.0 object detectors represent an optimization potential not to be neglected, e.g. in warehousing and logistics. Combined with an autonomous drone, such object detectors could make it possible to conduct inventory checks in a warehouse without human assistance. How different object detectors behave when applied to a real time industry scenario like \textit{SmartWarehouse} should be evaluated in this short paper. As being a feasibility study, the main goal of this work also is to discuss the feasibility of the \textit{SmartWarehouse} idea based on the performance of the two selected object detectors \textit{You Only Look Once} (YOLO) and \textit{Single Shot MultiBox Detector} (SSD) in terms of precision, responsiveness, training and inference behavior. In \autoref{relatedwork} related work to the two main object detectors should be introduced before explaining the approach and architecture of the \textit{SmartWarehouse} prototype in \autoref{architecture}. Next, some key aspects during the realization will be considered in \autoref{realization}. In \autoref{evaluation} the results of the feasibility study will be presented and evaluated before the interpretability of the results is discussed in \autoref{discussion}. \autoref{conclusion} gives a quick conclusion about the main achievements of this short paper.
+In times of the industrial change towards Industry 4.0 object detectors represent an optimization potential not to be neglected, e.g. in warehousing and logistics. Combined with an autonomous drone, such object detectors could make it possible to conduct inventory checks in a warehouse without human assistance. How different object detectors behave when applied to a real time industry scenario like \textit{SmartWarehouse} should be evaluated in this short paper. As being a feasibility study, the main goal of this work also is to discuss the technical feasibility of the \textit{SmartWarehouse} idea. In \autoref{relatedwork} related work to the two main object detectors should be introduced before explaining the approach and architecture of the \textit{SmartWarehouse} prototype in \autoref{architecture}. Next, some key aspects during the realization will be considered in \autoref{realization}. In \autoref{evaluation} the results of the feasibility study will be presented and evaluated before the interpretability of the results is discussed in \autoref{discussion}. \autoref{conclusion} gives a quick conclusion about the main achievements of this short paper.
 
 \section{Related Work} \label{relatedwork}
 
@@ -56,11 +56,11 @@ The \textit{You only Look Once} (YOLO) algorithm was introduced in \cite{JosephR
 
 \subsection{Defining the scenario}
 
-Two goals were defined for the feasibility study of \textit{SmartWarehouse}. First it is to be evaluated, how well existing object detectors perform in industry scenarios taking the example of \textit{SmartWarehouse} and the two object detectors YOLO and SSD. Second, one should deal with the feasibility of the implementation of this \textit{SmartWarehouse} scenario, which comprises the execution of an inventory for department stores with a drone. 
+Two goals were defined for the feasibility study of \textit{SmartWarehouse}. First it is to be evaluated, how well existing object detectors perform in industry scenarios taking the example of \textit{SmartWarehouse} scenario. Second, one should deal with the feasibility of the implementation of this \textit{SmartWarehouse} scenario, which comprises the execution of an inventory for department stores with a drone. 
 
 \subsection{Dataset}
 
-In the construction of the training dataset, the feasibility study does not aim to completely represent a large department store in the dataset, but rather to select a dataset that is as extensive as possible in order to prove the general feasibility of the \textit{SmartWarehouse} scenario. In this context, the focus was therefore on unpacked beverage bottles of a department store which can be assigned to nine different classes. All classes are distributed equally among the 1088 manually annotated images. 75\% of the images include a single instances of a beverage bottle to better train the patterns of the different classes. Furthermore, 13\% of the images contain occlusions of objects to be detected, detection situations from extreme viewing positions are represented to 4\%, and difficult illumination and lighting conditions are included to 8\%. Only a few examples (2\%) are related to different distances during detection. Care was also taken to continuously vary the backgrounds of the objects being detected. Finally, to simulate the department store where several objects are to be detected at once, in 12.5\% of all images the objects are arranged on shelves, one behind the other or in beverage crates. In 90\% of all images, only objects of one class are shown, since commodity inventories are likewise mostly grouped by commodity. 
+In the construction of the training dataset, the feasibility study does not aim to completely represent a large department store in the dataset. To prove the general feasibility of the \textit{SmartWarehouse} scenario, it is extensive enough to restrict the focus on unpacked beverage bottles of a department store which can be assigned to nine different classes. All classes are distributed equally among the 1088 manually annotated images. 75\% of the images include a single instances of a beverage bottle to better train the patterns of the different classes. Furthermore, 13\% of the images contain occlusions of objects to be detected, detection situations from extreme viewing positions are represented to 4\%, and difficult illumination and lighting conditions are included to 8\%. Only a few examples (2\%) are related to different distances during detection. Care was also taken to continuously vary the backgrounds of the objects being detected. Finally, to simulate the department store where several objects are to be detected at once, in 12.5\% of all images the objects are arranged on shelves, one behind the other or in beverage crates. 
 
 \subsection{Introduction of evaluation criteria}
 
@@ -69,7 +69,7 @@ To better compare object detectors with each other the following evaluation crit
 \begin{itemize}
 	\item Precision: The precision of an object detector measured in mAP
 	\item Reactivity: The inference rate with the model measured in \textit{Frames Per Second} (FPS)
-	\item Inference behavior: The inference behavior under special lighting conditions, extreme viewing positions, occultation of objects, and the behavior with double detected objects measured with good, medium, poor. 
+	\item Inference behavior: The inference behavior under special lighting conditions, extreme viewing positions, occultation of objects, and the behavior with double detected objects measured by the confidence score. 
 \end{itemize}
 
 \subsection{Selection of object detectors}
@@ -119,24 +119,7 @@ Both SSD and YOLO are capable to run inference in the real time scenario of \tex
 
 Another evaluation criterion is the responsiveness. Here, SSD300 scores slightly better with an average of 30 FPS than YOLOv3 with 28 FPS, although this difference should hardly be seen as a true decision criterion to prefer SSD300 over YOLOv3.
 
-Regarding inference behavior both object detectors struggle with difficult lightning conditions, extreme viewing positions, longer distances and occlusions. Some of those problems could be tackled better by enhancing the dataset with additional instances for those cases. For a close comparison see \autoref{inference}. 
-
-\begin{table}[h]
-	\caption{Inference behavior of SSD300 and YOLOv3}
-	\begin{tabularx}{0.48\textwidth}{lcc}
-		\toprule 
-		Criterion & SSD300 & YOLOv3 \\
-		\midrule
-		Lighting & 0 & 0 \\
-		Extreme view positions & 0 & 0 \\
-		Distance & 0 & 0 \\
-		Occlusion & - & - \\
-		Double detection & + & + \\
-		Background & + & + \\
-		Resolution & + & + \\
-		\bottomrule
-	\end{tabularx}  \label{inference}
-\end{table}
+Regarding inference behavior both object detectors struggle with difficult lightning conditions, extreme viewing positions, longer distances and occlusions. Some of those problems could be tackled better by enhancing the dataset with additional instances for those cases.
  
 Overall, it can be concluded that both SSD300 and YOLOv3 are object detectors for industrial use. If many objects of different scales are to be detected in the detection environment, SSD300 is preferable to YOLOv3. However, if this is not the case and more emphasis is placed on accuracy for simple datasets such as \textit{SmartWarehouse}, YOLOv3 is the better choice.
 

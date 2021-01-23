@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  23 JAN 2021 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  23 JAN 2021 18:39
 entering extended mode
 **./wissarbIEEE-template.tex
 (wissarbIEEE-template.tex
@@ -417,7 +417,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-<fig/ssd_results.png, id=74, 948.54375pt x 276.43275pt>
+<fig/ssd_results.png, id=75, 948.54375pt x 276.43275pt>
 File: fig/ssd_results.png Graphic file (type png)
 <use fig/ssd_results.png>
 Package pdftex.def Info: fig/ssd_results.png  used on input line 81.
@@ -427,12 +427,7 @@ Overfull \hbox (7.22688pt too wide) in paragraph at lines 81--82
  [][] 
  []
 
-[2 <./fig/ssd_results.png>]
-Underfull \hbox (badness 10000) in alignment at lines 138--138
-[][][] 
- []
-
-(wissarbIEEE-template.bbl
+[2 <./fig/ssd_results.png>] (wissarbIEEE-template.bbl
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
 2.
 
@@ -440,6 +435,11 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
 "
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
 \OT1/ptm/m/n/8 URL []$\OT1/pcr/m/n/8 https : / / doks-[]innovation . com / solu
 tions /
@@ -450,13 +450,13 @@ Package rerunfilecheck Info: File `wissarbIEEE-template.out' has not changed.
 (rerunfilecheck)             Checksum: B5A80C840EFFDD4E6648387A3B8E3AA7;849.
  ) 
 Here is how much of TeX's memory you used:
- 6147 strings out of 479765
- 103000 string characters out of 2865212
- 575233 words of memory out of 3000000
- 23020 multiletter control sequences out of 15000+200000
- 571885 words of font info for 90 fonts, out of 3000000 for 9000
+ 6143 strings out of 479765
+ 102962 string characters out of 2865212
+ 572233 words of memory out of 3000000
+ 23018 multiletter control sequences out of 15000+200000
+ 570161 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,7n,73p,1428b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,5n,73p,1221b,381s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
 nc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmmi10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
@@ -469,9 +469,9 @@ ers/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb
 ><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr
 8a.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on wissarbIEEE-template.pdf (3 pages, 318467 bytes).
+Output written on wissarbIEEE-template.pdf (3 pages, 317295 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
  118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
